@@ -276,6 +276,7 @@ class ActorRolloutRefWorker(Worker, DistProfilerExtension):
         enable_gradient_checkpointing=False,
         trust_remote_code=False,
         use_liger=False,
+        attn_implementation="flash_attention_2",
         role="actor",
         enable_activation_offload=False,
     ):
@@ -316,7 +317,7 @@ class ActorRolloutRefWorker(Worker, DistProfilerExtension):
 
         # override model kwargs
         actor_model_config = AutoConfig.from_pretrained(
-            local_path, trust_remote_code=trust_remote_code, attn_implementation="flash_attention_2"
+            local_path, trust_remote_code=trust_remote_code, attn_implementation=attn_implementation,
         )
         # TODO: VL models use VisionAttention, which directly uses flash_attention in transformers>=4.53
         # which will be patched by _ulysses_flash_attention_forward, but errorly misses position_ids
@@ -771,6 +772,7 @@ class ActorRolloutRefWorker(Worker, DistProfilerExtension):
                 enable_gradient_checkpointing=self.config.model.get("enable_gradient_checkpointing", False),
                 trust_remote_code=self.config.model.get("trust_remote_code", False),
                 use_liger=self.config.model.get("use_liger", False),
+                attn_implementation=self.config.model.get("attn_implementation", "flash_attention_2"),
                 role="actor",
                 enable_activation_offload=self.config.model.get("enable_activation_offload", False),
             )
@@ -814,6 +816,7 @@ class ActorRolloutRefWorker(Worker, DistProfilerExtension):
                 use_fused_kernels=use_fused_kernels,
                 trust_remote_code=self.config.model.get("trust_remote_code", False),
                 use_liger=self.config.model.get("use_liger", False),
+                attn_implementation=self.config.model.get("attn_implementation", "flash_attention_2"),
                 role="ref",
             )[0]
             OmegaConf.set_struct(self.config.ref, True)
