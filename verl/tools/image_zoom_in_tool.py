@@ -14,7 +14,6 @@
 # limitations under the License.
 
 import logging
-import os
 import threading
 from contextlib import ExitStack
 from enum import Enum
@@ -30,7 +29,7 @@ from .base_tool import BaseTool
 from .schemas import OpenAIFunctionToolSchema, ToolResponse
 
 logger = logging.getLogger(__name__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
+
 
 T = TypeVar("T")
 

@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import logging
-import os
 from functools import partial
 from typing import Any, Callable, Iterator, Optional
 
@@ -59,7 +58,6 @@ from ..utils import (
 from .utils import set_random_seed
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class MegatronEngine(BaseEngine):

@@ -14,7 +14,6 @@
 
 import logging
 import multiprocessing
-import os
 import time
 
 import ray
@@ -24,7 +23,6 @@ from sglang_router.launch_server import RouterArgs, launch_router
 from verl.workers.rollout.utils import get_free_port, is_valid_ipv6_address
 
 logger = logging.getLogger(__name__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def launch_router_process(

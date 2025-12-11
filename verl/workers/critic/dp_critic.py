@@ -16,7 +16,6 @@ Implement a multiprocess PPOCritic
 """
 
 import logging
-import os
 
 import torch
 import torch.distributed
@@ -36,7 +35,6 @@ from verl.utils.ulysses import gather_outputs_and_unpad, ulysses_pad_and_slice_i
 from verl.workers.critic import BasePPOCritic
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class DataParallelPPOCritic(BasePPOCritic):

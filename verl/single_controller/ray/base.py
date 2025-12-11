@@ -13,7 +13,6 @@
 # limitations under the License.
 import inspect
 import logging
-import os
 import socket
 from copy import deepcopy
 from typing import Any, Optional
@@ -32,7 +31,6 @@ from verl.utils.py_functional import temp_env_var
 __all__ = ["Worker"]
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def get_random_string(length: int) -> str:

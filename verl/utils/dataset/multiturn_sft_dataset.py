@@ -17,7 +17,6 @@ Multi-turn SFT dataset that supports training on conversation data with multiple
 """
 
 import logging
-import os
 import re
 from typing import Any, Optional
 
@@ -37,7 +36,6 @@ from verl.utils.dataset.vision_utils import process_image, process_video
 from verl.utils.fs import copy_local_path_from_hdfs
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def convert_nested_value_to_list_recursive(data_item):

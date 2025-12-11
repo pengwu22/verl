@@ -14,12 +14,10 @@
 # limitations under the License.
 
 import logging
-import os
 
 import torch
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "INFO"))
 
 
 def should_quantize_param(param_name: str) -> bool:

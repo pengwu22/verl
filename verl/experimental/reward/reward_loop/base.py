@@ -14,7 +14,6 @@
 
 import asyncio
 import logging
-import os
 from abc import ABC, abstractmethod
 
 from omegaconf import DictConfig
@@ -23,7 +22,6 @@ from transformers import AutoTokenizer
 from verl import DataProto
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class RewardLoopManagerBase(ABC):

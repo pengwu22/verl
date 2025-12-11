@@ -70,7 +70,7 @@ from verl.workers.rollout.vllm_rollout.utils import (
 )
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
+
 
 # TODO
 # 1. support pp in vllm

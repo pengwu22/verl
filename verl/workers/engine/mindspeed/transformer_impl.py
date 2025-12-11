@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import logging
-import os
 
 from mindspeed.megatron_adaptor import repatch
 
@@ -24,7 +23,6 @@ from ..base import EngineRegistry
 from ..megatron import MegatronEngineWithLMHead
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 @EngineRegistry.register(model_type="language_model", backend="megatron", device="npu")

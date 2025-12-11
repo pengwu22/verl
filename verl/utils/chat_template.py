@@ -1,11 +1,9 @@
 # Copyright 2025 Bytedance Ltd. and/or its affiliates
 import logging
-import os
 
 from jinja2 import TemplateError
 
 logger = logging.getLogger(__name__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def initialize_system_prompt(tokenizer, **apply_chat_template_kwargs) -> list[int]:

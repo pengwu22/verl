@@ -15,7 +15,6 @@
 import asyncio
 import importlib
 import logging
-import os
 import sys
 import threading
 from enum import Enum
@@ -25,7 +24,6 @@ from omegaconf import OmegaConf
 from verl.tools.schemas import OpenAIFunctionToolSchema
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class ToolType(Enum):

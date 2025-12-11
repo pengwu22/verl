@@ -19,7 +19,6 @@ from __future__ import annotations
 
 import functools
 import logging
-import os
 from typing import Any, Optional
 
 import torch
@@ -29,7 +28,6 @@ from verl.utils.device import get_torch_device
 from verl.utils.fsdp_utils import FSDPModule as FSDP2
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def _get_unique_tensor_key(tensor):

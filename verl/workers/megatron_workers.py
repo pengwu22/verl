@@ -80,7 +80,6 @@ from verl.workers.reward_model.megatron.reward_model import MegatronRewardModel
 from verl.workers.rollout import get_rollout_class
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def set_random_seed(seed, only_rollout=False):

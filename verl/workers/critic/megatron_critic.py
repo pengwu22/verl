@@ -17,7 +17,6 @@ Implement a multiprocess PPOCritic
 
 import itertools
 import logging
-import os
 from functools import partial
 from typing import Iterable
 
@@ -40,7 +39,6 @@ from verl.utils.torch_functional import broadcast_dict_tensor, masked_mean
 from verl.workers.critic import BasePPOCritic
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class MegatronPPOCritic(BasePPOCritic):

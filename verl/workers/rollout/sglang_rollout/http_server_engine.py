@@ -47,7 +47,6 @@ Functions:
 import asyncio
 import logging
 import multiprocessing
-import os
 import time
 from contextlib import asynccontextmanager
 from typing import Any, Callable, Optional
@@ -64,7 +63,7 @@ from sglang.srt.utils import kill_process_tree
 
 # Configure logger
 logger = logging.getLogger(__name__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
+
 
 # Default configuration constants
 DEFAULT_TIMEOUT = 60.0

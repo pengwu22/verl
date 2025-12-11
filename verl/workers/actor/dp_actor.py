@@ -18,7 +18,6 @@ Single Process Actor
 """
 
 import logging
-import os
 
 import torch
 from torch import nn
@@ -43,7 +42,6 @@ from verl.workers.config import ActorConfig
 __all__ = ["DataParallelPPOActor"]
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class DataParallelPPOActor(BasePPOActor):

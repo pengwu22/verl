@@ -37,7 +37,6 @@ from .checkpoint_manager import BaseCheckpointManager
 
 # Setup logging
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "INFO"))
 
 
 @dataclass

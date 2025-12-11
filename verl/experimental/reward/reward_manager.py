@@ -15,7 +15,6 @@
 import asyncio
 import json
 import logging
-import os
 
 import aiohttp
 import numpy as np
@@ -34,7 +33,6 @@ from .reward_loop import get_reward_loop_manager_cls
 from .reward_model import RewardModelManager
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 @ray.remote

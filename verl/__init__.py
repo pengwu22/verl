@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import importlib
-import logging
 import os
 
 from packaging.version import parse as parse_version
@@ -29,7 +28,7 @@ with open(os.path.join(version_folder, "version/version")) as f:
     __version__ = f.read().strip()
 
 
-set_basic_config(level=logging.WARNING)
+set_basic_config(level=os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 __all__ = ["DataProto", "__version__"]

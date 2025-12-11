@@ -15,7 +15,6 @@
 import asyncio
 import logging
 import multiprocessing
-import os
 import time
 from typing import Any
 
@@ -28,7 +27,6 @@ from fastapi.responses import JSONResponse
 from verl.workers.rollout.utils import get_free_port, is_valid_ipv6_address
 
 logger = logging.getLogger(__name__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 async def _read_async_response(resp: aiohttp.ClientResponse) -> dict[str, Any]:

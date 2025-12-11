@@ -21,7 +21,6 @@ Note that our model doesn't have to be `MegatronModule` because we don't share e
 
 import itertools
 import logging
-import os
 from functools import partial
 from typing import Iterable
 
@@ -60,7 +59,6 @@ from verl.workers.actor import BasePPOActor
 __all__ = ["MegatronPPOActor"]
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class MegatronPPOActor(BasePPOActor):

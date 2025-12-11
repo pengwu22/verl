@@ -39,7 +39,6 @@ from verl.utils.ulysses import (
 )
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 if is_flash_attn_2_available():

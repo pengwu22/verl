@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 import logging
-import os
 import warnings
 from functools import partial
 from typing import Any, Optional
@@ -47,7 +46,6 @@ from verl.workers.utils.losses import ppo_loss, value_loss
 from verl.workers.utils.padding import left_right_2_no_padding, no_padding_2_padding
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class TrainingWorker(Worker):

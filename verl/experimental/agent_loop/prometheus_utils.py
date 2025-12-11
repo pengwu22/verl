@@ -22,7 +22,6 @@ import yaml
 from verl.workers.config.rollout import PrometheusConfig
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def update_prometheus_config(config: PrometheusConfig, server_addresses: list[str]):

@@ -14,7 +14,6 @@
 import asyncio
 import heapq
 import logging
-import os
 import random
 from abc import ABC, abstractmethod
 from typing import Any, Optional
@@ -47,7 +46,6 @@ from verl.utils.transferqueue_utils import tqbridge
 from verl.workers.rollout.replica import TokenOutput, get_rollout_replica_class
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class AsyncLLMServerManager:

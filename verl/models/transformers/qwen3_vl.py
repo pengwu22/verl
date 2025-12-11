@@ -13,7 +13,6 @@
 # limitations under the License.
 
 import logging
-import os
 from dataclasses import dataclass
 from typing import Optional
 
@@ -24,7 +23,6 @@ from transformers.models.qwen3_vl.modeling_qwen3_vl import (
 )
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def get_rope_index(

@@ -14,7 +14,6 @@
 
 import json
 import logging
-import os
 from typing import Any, Optional
 from uuid import uuid4
 
@@ -27,7 +26,6 @@ from .base_tool import BaseTool
 from .schemas import OpenAIFunctionToolSchema, ToolResponse
 
 logger = logging.getLogger(__name__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 class MCPBaseTool(BaseTool):

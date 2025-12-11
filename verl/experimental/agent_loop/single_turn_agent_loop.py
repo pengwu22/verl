@@ -13,7 +13,6 @@
 # limitations under the License.
 import copy
 import logging
-import os
 from typing import Any
 from uuid import uuid4
 
@@ -21,7 +20,6 @@ from verl.experimental.agent_loop.agent_loop import AgentLoopBase, AgentLoopOutp
 from verl.utils.profiler import simple_timer
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 @register("single_turn_agent")

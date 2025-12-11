@@ -40,7 +40,6 @@ from verl.workers.rollout.sglang_rollout.utils import get_named_tensor_buckets
 from verl.workers.rollout.utils import is_valid_ipv6_address
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 # patch to avoid issue https://github.com/sgl-project/sglang/issues/6723

@@ -17,7 +17,6 @@ The concrete Engine implementation using PyTorch FullyShardedDataParallel (FSDP)
 
 import gc
 import logging
-import os
 import warnings
 from contextlib import nullcontext
 from typing import Callable, Optional
@@ -72,7 +71,7 @@ from ..utils import enable_full_determinism, postprocess_batch_func, prepare_mic
 from .utils import create_device_mesh, get_sharding_strategy
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
+
 
 device_name = get_device_name()
 

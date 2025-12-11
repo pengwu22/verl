@@ -14,7 +14,6 @@
 # limitations under the License.
 import difflib
 import logging
-import os
 from enum import Enum
 from typing import Any, Optional
 
@@ -26,7 +25,7 @@ from verl.tools.schemas import OpenAIFunctionToolCall, OpenAIFunctionToolSchema,
 from verl.utils.model import compute_position_id_with_mask
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
+
 
 BASE_CHAT_HISTORY = [
     {"role": "system", "content": "You are a helpful assistant."},

@@ -15,13 +15,11 @@
 
 import importlib.util
 import logging
-import os
 import sys
 
 from omegaconf import OmegaConf
 
 logger = logging.getLogger(__file__)
-logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 
 
 def get_interaction_class(cls_name):
